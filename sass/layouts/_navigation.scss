@@ -1,0 +1,139 @@
+.navigation {
+  @include for-size(tablet) {
+    margin-right: 80px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 300px;
+  }
+  // // display: flex;
+  // align-items: center;
+  // margin-right: auto;
+}
+.navigation-position {
+  /* bottom: 0; */
+  /* top: 0; */
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navigation-position.is-open {
+  @include for-size(mobile-min) {
+    display: block;
+  }
+
+  @include for-size(mobile) {
+    display: block;
+  }
+}
+
+.site-nav {
+  @include for-size(mobile-min) {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include for-size(mobile) {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.site-nav__item:not(:last-child) {
+  @include for-size(mobile-min) {
+    margin-bottom: 40px;
+  }
+
+  @include for-size(mobile) {
+    margin-bottom: 40px;
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
+
+  &:not(:last-child) {
+    @include for-size(tablet) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.site-nav__link {
+  font-weight: 500px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  text-decoration: none;
+
+  @include for-size(mobile-min) {
+    font-size: 18px;
+    line-height: 1.16;
+  }
+
+  @include for-size(mobile) {
+    font-size: 18px;
+    line-height: 1.16;
+  }
+
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  &:hover,
+  &:focus {
+    font-weight: 500px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
+
+.site-nav__item .current {
+  position: relative;
+  color: $accent-color;
+}
+
+.current::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -8px;
+  opacity: 1;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $accent-color;
+
+  @include for-size(tablet) {
+    bottom: -32px;
+  }
+}

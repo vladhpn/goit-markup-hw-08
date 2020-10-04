@@ -1,0 +1,51 @@
+.page-header {
+  border: 1px solid #ececec;
+  background-color: $primary-color;
+  position: relative;
+}
+
+.page-header .flexbox {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // justify-content: flex-end;
+  }
+}
+
+.menu-button {
+  display: inline-block;
+  border: none;
+  background-color: $primary-color;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.menu-button__icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px 8px;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+  @include for-size(mobile) {
+    display: block;
+  }
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+  @include for-size(mobile) {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+  @include for-size(mobile) {
+    display: none;
+  }
+}

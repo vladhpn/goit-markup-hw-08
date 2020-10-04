@@ -1,0 +1,50 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  line-height: 1.16;
+  font-weight: 700;
+  line-height: 1.19;
+  color: $accent-color;
+  text-decoration: none;
+
+  @include for-size(tablet) {
+    margin-right: 88px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 26px;
+    margin-right: 93px;
+  }
+}
+
+.logo-header {
+  // margin-right: 93px;
+  // margin-top: 16px;
+  // margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+
+  @include for-size(mobile-min) {
+    justify-content: space-between;
+  }
+
+  @include for-size(mobile) {
+    justify-content: space-between;
+  }
+
+  @include for-size(tablet) {
+    justify-content: center;
+  }
+
+  @include for-size(desktop) {
+    justify-content: flex-start;
+  }
+
+  // @include for-size(tablet) {
+  //   margin-right: 88px;
+  // }
+}
+
+.logo-header__color {
+  color: $title-text-color;
+}

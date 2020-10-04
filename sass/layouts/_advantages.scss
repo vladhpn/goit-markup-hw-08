@@ -1,0 +1,85 @@
+.advantages {
+  padding-top: 60px;
+  background-color: $primary-color;
+
+  @include for-size(desktop) {
+    display: flex;
+    padding-top: 94px;
+    margin-bottom: 90px;
+  }
+}
+
+.advantages-list {
+  margin-bottom: 30px;
+
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
+
+  &:nth-child(2n) {
+    @include for-size(tablet) {
+      margin-right: 0;
+    }
+  }
+  &:nth-last-child(-n + 2) {
+    @include for-size(tablet) {
+      margin-bottom: 60px;
+    }
+  }
+  @include for-size(desktop) {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  &:not(:last-child) {
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.advantages__title {
+  margin-bottom: 10px;
+
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $title-text-color;
+  text-align: center;
+}
+
+.advantages__text {
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.advantages-item::before {
+  content: "";
+  display: block;
+  // width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.group::before {
+  background-image: url(../images/group.svg);
+}
+
+.clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}

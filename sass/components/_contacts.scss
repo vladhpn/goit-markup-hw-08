@@ -1,0 +1,79 @@
+.auth-nav {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+  }
+
+  // display: inline-flex;
+  // margin-top: 32px;
+  // margin-bottom: 32px;
+}
+
+// font-size: 18px;
+// line-height: 21px;
+
+.auth-nav-item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+  &:nth-last-child(1) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &:not(:last-child) {
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.auth-nav__contacts {
+  font-weight: 500px;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  text-decoration: none;
+
+  @include for-size(mobile-min) {
+    font-size: 18px;
+    line-height: 1.16;
+  }
+
+  @include for-size(mobile) {
+    font-size: 18px;
+    line-height: 1.16;
+  }
+
+  @include for-size(tablet) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  &:hover .email-icon,
+  &:hover .phone-icone {
+    fill: $accent-color;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+}

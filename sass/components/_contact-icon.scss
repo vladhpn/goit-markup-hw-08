@@ -1,0 +1,20 @@
+.email-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: $primary-text-color;
+  @include for-size(tablet-max) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.phone-icone {
+  width: 10px;
+  height: 14px;
+  margin-right: 10px;
+  fill: $primary-text-color;
+}
+
+// width: 10px;
+// height: 14px;
